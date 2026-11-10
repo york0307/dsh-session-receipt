@@ -1,0 +1,7 @@
+# dsh-session-receipt 的 bundle patch —— 把插件挂进 DSH 配置树。
+#
+# id 必须与包名一致：DSH STORE 上架契约按 id 比对 entryId。
+# 注意：`id:` 那一行不能写行尾注释，商城预检用正则抓该行的值。
+- insert:
+    - id: dsh-session-receipt
+      name: 'dsh-session-receipt'

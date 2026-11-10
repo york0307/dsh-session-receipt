@@ -1,0 +1,68 @@
+{
+  "name": "dsh-session-receipt",
+  "version": "1.0.0",
+  "description": "会话小票：被动记录本次会话的工具调用、碰过的文件、失败次数与上下文占用，随时出一张账。零配置、零依赖、零网络、零额外令牌。",
+  "type": "module",
+  "author": {
+    "name": "york0307",
+    "email": "yorky0307@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/york0307/dsh-session-receipt.git"
+  },
+  "homepage": "https://github.com/york0307/dsh-session-receipt#readme",
+  "bugs": {
+    "url": "https://github.com/york0307/dsh-session-receipt/issues"
+  },
+  "main": "index.js",
+  "icon": "icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "pack:check": "node --test && npm pack --dry-run"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "receipt",
+    "audit",
+    "report",
+    "observability",
+    "token",
+    "context",
+    "会话",
+    "小票",
+    "复盘",
+    "审计"
+  ],
+  "license": "MIT",
+  "engines": {
+    "dsh": ">=0.2.0 <0.3.0",
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.2-rc.1": "compatible"
+      }
+    }
+  }
+}
